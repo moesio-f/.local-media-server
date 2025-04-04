@@ -40,7 +40,7 @@ dest=$2
 
 # Run rsync
 for t in radarr sonarr prowlarr qbittorrent jellyfin; do
-	rsync -av $source:$t $dest
+	rsync -av --exclude="media/*" --exclude="torrent/*" --exclude="torrents/*" $source:$t $dest
 done
 
 # Wait for all to finish

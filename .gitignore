@@ -3,6 +3,9 @@
 **/config
 **/theme
 **/venv
+**/torrents
+**/torrent
+**/media
 
 # Non-trackable files
 *.env

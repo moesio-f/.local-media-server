@@ -8,8 +8,8 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./config:/config
-      - /home/server/media:/media
-      - /home/server/torrents:/torrents
+      - ./media:/media
+      - ./torrents:/torrents
     ports:
       - 7878:7878
     extra_hosts:
