@@ -1,2 +1,3 @@
-# .local-media-server
-Personal media server/streaming with Open Source software (Jellyfin, radar, sonnar, prowlar, qBittorent).
+# Local Media Server
+
+This repository contains a simple template for a personal media server with streaming support.

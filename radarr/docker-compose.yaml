@@ -1,0 +1,17 @@
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./config:/config
+      - /home/server/media:/media
+      - /home/server/torrents:/torrents
+    ports:
+      - 7878:7878
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: 'unless-stopped'

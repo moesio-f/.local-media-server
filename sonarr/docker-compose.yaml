@@ -1,0 +1,17 @@
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - ./config:/config
+      - /home/server/media:/media
+      - /home/server/torrents:/torrents
+    ports:
+      - 8989:8989
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: 'unless-stopped'

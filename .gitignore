@@ -1,0 +1,9 @@
+# Config/cache/utilities directories should be managed elsewhere (e.g., backups, etc)
+**/cache
+**/config
+**/theme
+**/venv
+
+# Non-trackable files
+*.env
+*.tar*

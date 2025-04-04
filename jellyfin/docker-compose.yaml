@@ -1,0 +1,16 @@
+# Jellyfin for media streaming
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    network_mode: host
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      # Add bind volumes for Jellyfin
+      - type: bind
+        source: ./media
+        target: /media
+    restart: 'unless-stopped'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'

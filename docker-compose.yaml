@@ -1,0 +1,6 @@
+include:
+  - jellyfin/docker-compose.yaml
+  - prowlarr/docker-compose.yaml
+  - qbittorrent/docker-compose.yaml
+  - radarr/docker-compose.yaml
+  - sonarr/docker-compose.yaml
