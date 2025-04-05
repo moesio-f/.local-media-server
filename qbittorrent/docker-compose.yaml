@@ -10,8 +10,12 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - ./config:/config
-      - ./torrents:/torrents
-      - ./media:/media
+      - type: bind
+        source: ./torrents
+        target: /torrents
+      - type: bind
+        source: ./media
+        target: /media
       - ./theme:/themes/qbittorrent
     ports:
       - 3344:3344

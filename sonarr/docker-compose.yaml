@@ -8,8 +8,12 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./config:/config
-      - ./media:/media
-      - ./torrents:/torrents
+      - type: bind
+        source: ./media
+        target: /media
+      - type: bind
+        source: ./torrents
+        target: /torrents
     ports:
       - 8989:8989
     extra_hosts:
