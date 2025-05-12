@@ -11,6 +11,16 @@ services:
       - type: bind
         source: ./media
         target: /media
+    # If no GPU available, comment the following
+    #   lines
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     restart: 'unless-stopped'
     extra_hosts:
       - 'host.docker.internal:host-gateway'
