@@ -12,7 +12,7 @@ services:
         source: ./media
         target: /media
       - type: bind
-        source: .torrents
+        source: ./torrents
         target: /torrents
     ports:
       - 7878:7878
